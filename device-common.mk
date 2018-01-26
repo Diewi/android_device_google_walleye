@@ -132,3 +132,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # AOSP packages.
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
+
+# ModemService
+PRODUCT_COPY_FILES += \
+  device/google/walleye/modemservice.xml:system/etc/sysconfig/modemservice.xml
+
