@@ -68,36 +68,12 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init-common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init-$(PRODUCT_HARDWARE).rc \
     $(LOCAL_PATH)/init.common.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_HARDWARE).usb.rc \
-    $(LOCAL_PATH)/init.insmod.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.cfg
 
 # Input device files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/synaptics_dsxv26.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/synaptics_dsxv26.idc
 
 include device/google/wahoo/device.mk
-
-# Kernel modules
-ifeq (,$(filter-out walleye_gcc, $(TARGET_PRODUCT)))
-# if TARGET_PRODUCT == *_gcc
-BOARD_VENDOR_KERNEL_MODULES += \
-    device/google/wahoo-kernel/gcc/synaptics_dsx_core_htc.ko \
-    device/google/wahoo-kernel/gcc/synaptics_dsx_rmi_dev_htc.ko \
-    device/google/wahoo-kernel/gcc/synaptics_dsx_fw_update_htc.ko \
-    device/google/wahoo-kernel/gcc/htc_battery.ko
-else ifeq (,$(filter-out walleye_kasan, $(TARGET_PRODUCT)))
-# if TARGET_PRODUCT == *_kasan
-BOARD_VENDOR_KERNEL_MODULES += \
-    device/google/wahoo-kernel/kasan/synaptics_dsx_core_htc.ko \
-    device/google/wahoo-kernel/kasan/synaptics_dsx_rmi_dev_htc.ko \
-    device/google/wahoo-kernel/kasan/synaptics_dsx_fw_update_htc.ko \
-    device/google/wahoo-kernel/kasan/htc_battery.ko
-else
-BOARD_VENDOR_KERNEL_MODULES += \
-    device/google/wahoo-kernel/synaptics_dsx_core_htc.ko \
-    device/google/wahoo-kernel/synaptics_dsx_rmi_dev_htc.ko \
-    device/google/wahoo-kernel/synaptics_dsx_fw_update_htc.ko \
-    device/google/wahoo-kernel/htc_battery.ko
-endif
 
 PRODUCT_COPY_FILES += \
     device/google/walleye/nfc/libnfc-nxp.walleye.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
