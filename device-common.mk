@@ -113,3 +113,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
   device/google/walleye/modemservice.xml:system/etc/sysconfig/modemservice.xml
 
+# Video calling prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.vt_avail_ovr=1
