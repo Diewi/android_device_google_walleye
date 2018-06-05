@@ -48,3 +48,9 @@ PRODUCT_NAME := omni_walleye
 PRODUCT_DEVICE := walleye
 PRODUCT_BRAND := OmniRom
 PRODUCT_MANUFACTURER := Google
+
+# Device Fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=walleye \
+    BUILD_FINGERPRINT=google/walleye/walleye:8.1.0/OPM2.171026.006.C1/4769658:user/release-keys \
+	PRIVATE_BUILD_DESC="walleye-user 8.1.0 OPM2.171026.006.C1 4769658 release-keys"
