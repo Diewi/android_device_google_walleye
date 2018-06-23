@@ -29,3 +29,5 @@ BOARD_SEPOLICY_DIRS += device/google/muskie/sepolicy
 BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/wahoo-setup.sh
 
 BOARD_LISA_TARGET_SCRIPTS := device/google/wahoo/lisa/
+
+include device/google/walleye/walleye/BoardConfigOmni.mk

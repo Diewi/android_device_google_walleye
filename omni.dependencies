@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "omnirom",
+    "repository": "android_device_google_wahoo",
+    "target_path": "device/google/wahoo",
+    "revision": "android-8.1"
+  }
+]
