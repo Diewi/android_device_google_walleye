@@ -48,6 +48,7 @@ PRODUCT_NAME := omni_walleye
 PRODUCT_DEVICE := walleye
 PRODUCT_BRAND := OmniRom
 PRODUCT_MANUFACTURER := Google
+PRODUCT_MODEL := Pixel 2
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
