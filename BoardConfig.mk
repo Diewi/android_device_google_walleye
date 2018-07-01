@@ -30,7 +30,7 @@ include device/google/wahoo/BoardConfig.mk
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 
-#sepolicy common to walleye/walleye
+# Walleye-specific SEPolicy
 BOARD_SEPOLICY_DIRS += device/google/walleye/sepolicy
 
 # Testing related defines
@@ -38,4 +38,4 @@ BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/wahoo-setup.sh
 
 BOARD_LISA_TARGET_SCRIPTS := device/google/wahoo/lisa/
 
-include device/google/walleye/walleye/BoardConfigOmni.mk
+include device/google/walleye/BoardConfigOmni.mk
