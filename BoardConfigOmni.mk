@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-# Common board omni-specific config for taimen, walleye
+# Common board omni-specific config for walleye
 
--include vendor/google/wahoo/BoardConfigVendor.mk
+-include vendor/google/walleye/BoardConfigVendor.mk
