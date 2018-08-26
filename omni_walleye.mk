@@ -36,4 +36,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="walleye-user 9 PPR1.180610.009 4898911 release-keys"
 BUILD_FINGERPRINT=google/walleye/walleye:9/PPR1.180610.009/4898911:user/release-keys
 
+# Do not restrict owner of omni prebuilt files
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
 $(call inherit-product-if-exists, vendor/google/walleye/walleye-vendor.mk)
